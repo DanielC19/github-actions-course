@@ -1,0 +1,21 @@
+name: workflow-caller
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow-1:
+    uses: DanielC19/github-actions-course/.github/workflows/reusable-workflow-greet.yml@main
+    with:
+      username: Daniel
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
+  call-workflow-2:
+    uses: DanielC19/github-actions-course/.github/workflows/reusable-workflow-greet.yml@main
+    with:
+      username: Kenshin
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
+  
