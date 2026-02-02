@@ -5,14 +5,14 @@ on:
 
 jobs:
   call-workflow-1:
-    uses: DanielC19/github-actions-course/.github/workflows/reusable-workflow-greet.yml@main
+    uses: DanielC19/github-actions-course/.github/workflows/reusable-greet.yml@main
     with:
       username: Daniel
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 
   call-workflow-2:
-    uses: DanielC19/github-actions-course/.github/workflows/reusable-workflow-greet.yml@main
+    uses: DanielC19/github-actions-course/.github/workflows/reusable-greet.yml@main
     with:
       username: Kenshin
     secrets:
